@@ -1,0 +1,13 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+singular_news
+{% endblock title %}
+
+{% block content %}
+<h1>{{ singular_news.title|censor }}</h1>
+{{ singular_news.dateCreation|date:'d.m.Y' }}
+<p>{{ singular_news.text|censor }}</p>
+{% endblock content %}
